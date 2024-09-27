@@ -1,5 +1,11 @@
 <h1><%= @list.name %>'s list</h1>
 
-<%= link_to "Back to menu", lists_path %>
+<%# // Montrer tous les films associés  %>
+<%#
+  Je récupère tous les bookmarks dont le list ID est dans "list_id"
+  Ca me donne une liste de film
+  J'affiche tous ces films
+%>
 
-<%= link_to "Add a movie", new_bookmark_path %>
+<%= link_to "Back to menu", lists_path %>
+<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
