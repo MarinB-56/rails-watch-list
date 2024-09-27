@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :lists, only: [:new, :index, :edit, :destroy]
+  resources :lists, except: [:destroy]
 end
