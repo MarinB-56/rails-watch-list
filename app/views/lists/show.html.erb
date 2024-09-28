@@ -1,11 +1,15 @@
 <h1><%= @list.name %>'s list</h1>
 
 <%# // Montrer tous les films associés  %>
-<%#
-  Je récupère tous les bookmarks dont le list ID est dans "list_id"
-  Ca me donne une liste de film
-  J'affiche tous ces films
-%>
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= movie.title %>
+      <%= Bookmark.find_by(movie_id: movie.id).comment %>
+      <%= link_to "Remove", bookmark_path(movie, list: @list), data: { turbo_method: :delete, turbo_confirm: "Remove '#{movie.title}' from #{@list.name}?" } %>
+    </li>
+  <% end %>
+</ul>
 
 <%= link_to "Back to menu", lists_path %>
 <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
