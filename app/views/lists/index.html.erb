@@ -1,9 +1,18 @@
-<h1>All the lists</h1>
+<div class="banner">
+  <h1>Save any king of movies</h1>
+</div>
 
-<%= link_to "New list", new_list_path %>
+<div class="container">
+  <div class="d-flex justify-content-between mt-5 align-items-center">
+    <h2>My lists</h2>
+    <%= link_to "Create a movie list", new_list_path, class:"button-add" %>
+  </div>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+  <ul class="container-lists">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list) do %>
+        <li class="card-list"><%= list.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

@@ -1,12 +1,25 @@
-.navbar-lewagon {
+.navbar-watch {
   justify-content: space-between;
   background: white;
+  display: flex;
+
+  p, h1 {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-logo {
+  align-items: center;
+}
+.navbar-watch .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-watch .navbar-brand img {
   width: 40px;
 }

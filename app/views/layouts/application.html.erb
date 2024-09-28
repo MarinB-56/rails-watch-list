@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <div class="navbar-watch align-items-center">
+
+      <%= link_to lists_path, class: "d-flex justify-items-center" do %>
+        <%= image_tag('popcorn_logo.png', alt: 'Watchlist logo', size: '60x60') %>
+      <% end %>
+
+      <div class="d-flex me-3">
+        <p class="me-3">My lists</p>
+        <%= link_to "New list", new_list_path %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
