@@ -1,16 +1,3 @@
-.card-list {
-  border: 1px solid black;
-  padding: 50px 0px;
-  text-align: center;
-  background-image: url("cinema.jpeg");
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 24px;
-  font-weight: bold;
-}
-
 .container-lists {
   list-style-type: none;
   padding: 0;
@@ -18,6 +5,73 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.my-card {
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  min-width: 0
+}
+
+.card-list {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  background-image: url("cinema.jpeg");
+  padding: 50px 0px;
+}
+
+.card-movie {
+  color: black;
+
+  .card-movie-main {
+    padding: 20px;
+    padding-bottom: 15px;
+  }
+
+  .card-movie-picture {
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .card-movie-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.card-movie-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-movie-title {
+    font-weight: bolder;
+  }
+}
+
+.card-movie-delete {
+  a {
+    color: red;
+  }
+}
+
+.card-movie-quote {
+  display: flex;
+
+  p {
+    margin: 0;
+  }
+
 }
 
 a {

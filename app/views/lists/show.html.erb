@@ -7,10 +7,36 @@
   <%# // Montrer tous les films associés  %>
   <ul class="container-movies">
     <% @movies.each do |movie| %>
-      <li class="card-list">
-        <%= movie.title %>
-        <%= Bookmark.find_by(movie_id: movie.id).comment %>
-        <%= link_to "Remove", bookmark_path(movie, list: @list), data: { turbo_method: :delete, turbo_confirm: "Remove '#{movie.title}' from #{@list.name}?" } %>
+      <li class="my-card">
+        <div class="card-movie">
+          <div class="my-card">
+            <%= image_tag("cinema.jpg", class: "card-movie-picture") %>
+          </div>
+
+          <div class="card-movie-main">
+            <div class="card-movie-header">
+              <p class="card-movie-title me-3"><%= movie.title %></p>
+              <p class="me-2"><%= movie.rating %></p>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="card-movie-content">
+              <p><%= movie.overview %></p>
+            </div>
+
+            <div class="card-movie-footer">
+              <div class="card-movie-quote">
+                <i class="fa-solid fa-quote-left me-2"></i>
+                <p>Everyone should be able to comment</h5>
+              </div>
+
+              <div class="card-movie-delete">
+                <%= link_to "delete" %>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </li>
     <% end %>
   </ul>

@@ -11,7 +11,7 @@
   <ul class="container-lists">
     <% @lists.each do |list| %>
       <%= link_to list_path(list) do %>
-        <li class="card-list"><%= list.name %></li>
+        <li class="my-card card-list"><%= list.name %></li>
       <% end %>
     <% end %>
   </ul>
