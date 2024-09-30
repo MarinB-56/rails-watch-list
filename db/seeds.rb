@@ -1,5 +1,5 @@
 puts "Erase database..."
-Movie.destroy_all if Rails.env.development?
+# Movie.destroy_all if Rails.env.development?
 
 puts "Create movies..."
 Movie.create(
