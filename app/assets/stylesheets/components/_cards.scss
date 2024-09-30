@@ -23,3 +23,12 @@
 a {
   text-decoration: none;
 }
+
+.container-movies {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
