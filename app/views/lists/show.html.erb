@@ -27,11 +27,11 @@
             <div class="card-movie-footer">
               <div class="card-movie-quote">
                 <i class="fa-solid fa-quote-left me-2"></i>
-                <p>Everyone should be able to comment</h5>
+                <p><%=  Bookmark.find_by(list: @list, movie: movie).comment %></h5>
               </div>
 
               <div class="card-movie-delete">
-                <%= link_to "delete" %>
+                <%= link_to "delete", bookmark_path(movie), data: {turbo_method: "delete", turbo_confirm: "Delete #{movie.title} from #{@list.name}?"} %>
               </div>
             </div>
           </div>
