@@ -1,7 +1,7 @@
-<h1>Add a movie to the list (= Create a new bookmark)</h1>
+<h1>Add a movie to the list</h1>
 
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.association :movie %>
   <%= f.input :comment %>
-  <%= f.submit %>
+  <%= f.submit "Add to #{@list.name}"%>
 <% end %>
