@@ -10,6 +10,8 @@
       <li class="my-card">
         <div class="card-movie">
           <div>
+            <%# the image stored in poster_url is a predefined poster made by TMDB.
+            Change seed to get the whole movie poster %>
             <%= image_tag(movie.poster_url, class: "card-movie-picture", width: "100%") %>
           </div>
 
@@ -31,6 +33,7 @@
               </div>
 
               <div class="card-movie-delete">
+                <%= link_to "edit", edit_bookmark_path(Bookmark.find_by(list: @list, movie: movie)) ,class: "text-primary me-3" %>
                 <%= link_to "delete", bookmark_path(movie), data: {turbo_method: "delete", turbo_confirm: "Delete #{movie.title} from #{@list.name}?"} %>
               </div>
             </div>
