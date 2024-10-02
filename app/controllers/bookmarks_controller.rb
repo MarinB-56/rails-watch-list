@@ -13,7 +13,7 @@ class BookmarksController < ApplicationController
       redirect_to list_path(@list)
     else
       render :new, status: :unprocessable_entity
-    endkitt.lewagon.com
+    end
   end
 
   def edit
