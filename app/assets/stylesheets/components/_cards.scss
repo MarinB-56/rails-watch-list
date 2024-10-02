@@ -36,21 +36,21 @@
 
 .card-movie {
   color: black;
+}
 
-  .card-movie-main {
-    padding: 20px;
-    padding-bottom: 15px;
-  }
+.card-movie-main {
+  padding: 20px;
+  padding-bottom: 15px;
+}
 
-  .card-movie-picture {
-    border-radius: 5px 5px 0px 0px;
-  }
+.card-movie-picture {
+  border-radius: 5px 5px 0px 0px;
+}
 
-  .card-movie-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.card-movie-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-movie-header {
@@ -62,10 +62,10 @@
     margin: 0;
     padding: 0;
   }
+}
 
-  .card-movie-title {
-    font-weight: bolder;
-  }
+.card-movie-title {
+  font-weight: bolder;
 }
 
 .card-movie-delete {
@@ -91,5 +91,4 @@ a {
   .container-movies {
     grid-template-columns: 1fr;
   }
-
 }
