@@ -11,7 +11,11 @@
   <ul class="container-lists">
     <% @lists.each do |list| %>
       <%= link_to list_path(list) do %>
-        <li class="my-card card-list"><%= list.name %></li>
+        <li>
+          <div class="my-card card-list" style="background-image: url(<%= asset_path('cinema.jpg') %>)">
+            <%= list.name %>
+          </div>
+        </li>
       <% end %>
     <% end %>
   </ul>

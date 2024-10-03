@@ -12,8 +12,8 @@
           <div>
             <%# the image stored in poster_url is a predefined poster made by TMDB.
             Change seed to get the whole movie poster %>
-            <%# <%= image_tag(movie.poster_url, class: "card-movie-picture", width: "100%") %>
-            <%= cl_image_tag("opywjlka4wvmeop90vwa", width: 1000, height: 200 ,crop: :thumb, gravity: :face, class: 'card-movie-picture' ) %>
+            <%= image_tag(movie.poster_url, class: "card-movie-picture", width: "100%") %>
+            <%# <%= cl_image_tag("opywjlka4wvmeop90vwa", width: 1000, height: 500 ,crop: :thumb, gravity: :face, class: 'card-movie-picture' ) %>
           </div>
 
           <div class="card-movie-main">
