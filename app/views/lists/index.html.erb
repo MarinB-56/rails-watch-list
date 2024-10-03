@@ -12,7 +12,7 @@
     <% @lists.each do |list| %>
       <%= link_to list_path(list) do %>
         <li>
-          <div class="my-card card-list" style="background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('cinema.jpg') %>)">
+          <div class="my-card card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key, width: 1000, height: 500 ,crop: :thumb, gravity: :face) : asset_path('cinema.jpg') %>)">
             <%= list.name %>
           </div>
         </li>
