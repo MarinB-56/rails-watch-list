@@ -1,3 +1,7 @@
+<div class="banner" style="background-image: url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key, width: 1000, height: 500 ,crop: :thumb, gravity: :face ) : asset_path('cinema.jpg') %>)" >
+  <h1><%= @list.name %></h1>
+</div>
+
 <div class="container">
   <div class="d-flex justify-content-between mt-5 align-items-center">
     <h1><%= @list.name %>'s list</h1>
@@ -13,7 +17,7 @@
             <%# the image stored in poster_url is a predefined poster made by TMDB.
             Change seed to get the whole movie poster %>
             <%= image_tag(movie.poster_url, class: "card-movie-picture", width: "100%") %>
-            <%# <%= cl_image_tag("opywjlka4wvmeop90vwa", width: 1000, height: 500 ,crop: :thumb, gravity: :face, class: 'card-movie-picture' ) %>
+            <%# <%= cl_image_tag(@list.photo.key, width: 1000, height: 500 ,crop: :thumb, gravity: :face, class: 'card-movie-picture' ) %>
           </div>
 
           <div class="card-movie-main">
